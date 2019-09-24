@@ -52,6 +52,10 @@ class ViewController: UIViewController {
             endMessageLabel.text = "Cannot pizza by zero."
             return
         }
+        guard slicesTextInput != 0 else {
+            endMessageLabel.text = "No more pizza!"
+            return
+        }
         endMessageLabel.text = "Everybody gets \(slicesTextInput/mouthsTextInput) slices."
     }
 }
